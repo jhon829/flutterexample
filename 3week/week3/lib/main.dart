@@ -22,7 +22,7 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[600],
+      backgroundColor: const Color.fromRGBO(148, 189, 242, 1),
       appBar: AppBar(
         title: const Text("League of Legend Heroes"),
         centerTitle: true,
