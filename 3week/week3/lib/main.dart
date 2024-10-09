@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'League of Legend ID card',
+      title: 'Profile',
       home: MyCard(),
     );
   }
@@ -25,7 +25,7 @@ class MyCard extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 99, 135, 242),
       appBar: AppBar(
         title: const Text(
-          "Hello",
+          "Profile",
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
@@ -35,11 +35,11 @@ class MyCard extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 30.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center, // 중앙 정렬로 변경
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Center(
               child: CircleAvatar(
-                backgroundColor: Colors.amberAccent,
+                backgroundImage: AssetImage('assets/myprofile.jpg'),
                 radius: 70.0,
               ),
             ),
@@ -47,43 +47,95 @@ class MyCard extends StatelessWidget {
               height: 60.0,
               color: Colors.grey[850],
             ),
-            const Center( // Center 위젯으로 감싸기
-              child: Text('Name',
-                style: TextStyle(color: Colors.white, letterSpacing: 2.0)),
-            ),
+            const Text('Name',
+              style: TextStyle(color: Colors.white, letterSpacing: 2.0)),
             const SizedBox(
               height: 10.0,
             ),
-            const Center( // Center 위젯으로 감싸기
-              child: Text('Master Yi',
-                style: TextStyle(
-                  color: Colors.white,
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-                )
-              ),
+            const Text('김동년',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold
+              )
             ),
             const SizedBox(
               height: 30.0,
             ),
-            const Center( // Center 위젯으로 감싸기
-              child: Text('Master Yi power level',
-                style: TextStyle(color: Colors.white, letterSpacing: 2.0)),
+            const Text('Student ID',
+              style: TextStyle(color: Colors.white, letterSpacing: 2.0)),
+            const SizedBox(
+              height: 10.0,
+            ),
+            const Text('C084007',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold
+              )
+            ),
+            const SizedBox(
+              height: 30.0,
+            ),
+            const Text('Major',
+              style: TextStyle(color: Colors.white, letterSpacing: 2.0)),
+            const SizedBox(
+              height: 10.0,
+            ),
+            const Text('소프트웨어융합학과',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold
+              )
+            ),
+            const SizedBox(height: 30.0),
+            const Row(
+              children: [
+                SizedBox(width: 10.0),
+                Text(
+                  'Hobby  ',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                Icon(Icons.search, color: Colors.white, size: 16.0),
+              ],
             ),
             const SizedBox(
               height: 10.0,
             ),
-            const Center( // Center 위젯으로 감싸기
-              child: Text('20',
-                style: TextStyle(
-                  color: Colors.white,
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-                )
-              ),
-            )
+            const Row(
+              children: [
+                SizedBox(width: 10.0),
+                Icon(Icons.movie, color: Colors.white, size: 20.0),
+                Text(
+                  ' 영화감상',
+                  style: TextStyle(color: Colors.white, fontSize: 20.0),
+                ),
+              ],
+            ),
+            const Row(
+              children: [
+                SizedBox(width: 10.0),
+                Icon(Icons.airplane_ticket, color: Colors.white, size: 20.0),
+                Text(
+                  ' 여행',
+                  style: TextStyle(color: Colors.white, fontSize: 20.0),
+                ),
+              ],
+            ),
+            const Row(
+              children: [
+                SizedBox(width: 10.0),
+                Icon(Icons.casino, color: Colors.white, size: 20.0),
+                Text(
+                  ' 보드게임',
+                  style: TextStyle(color: Colors.white, fontSize: 20.0),
+                ),
+              ],
+            ),
           ],
         ),
       ),
